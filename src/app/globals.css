@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  /* 브랜드 토큰 (와이어프레임 기준 · 디자인 확정 시 교체) */
+  --ink: #1d1f20;
+  --background: #ffffff;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-background: var(--background);
+  --font-sans: var(--font-sans-kr), system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
