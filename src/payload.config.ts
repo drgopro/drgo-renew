@@ -9,6 +9,7 @@ import sharp from "sharp";
 import { Users } from "./collections/Users.ts";
 import { Media } from "./collections/Media.ts";
 import { Cases } from "./collections/Cases.ts";
+import { Posts } from "./collections/Posts.ts";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -25,7 +26,7 @@ export default buildConfig({
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname) },
   },
-  collections: [Users, Media, Cases],
+  collections: [Users, Media, Cases, Posts],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "dev-only-secret-change-me",
   typescript: { outputFile: path.resolve(dirname, "payload-types.ts") },
