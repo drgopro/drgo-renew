@@ -27,13 +27,14 @@ export function Placeholder({ label, className = "" }: { label: string; classNam
   );
 }
 
-export function KakaoCta({ title = "상담은 카카오톡으로" }: { title?: string }) {
+export function KakaoCta({ title = "상담은 카카오톡으로", subtitle }: { title?: string; subtitle?: string }) {
   return (
     <section className="bg-ink px-4 py-12 text-center text-white">
       <p className="text-2xl font-bold">{title}</p>
+      {subtitle && <p className="mt-2 text-sm text-neutral-400">{subtitle}</p>}
       <a
         href="https://pf.kakao.com/"
-        className="mt-5 inline-block rounded-xl bg-white px-10 py-3.5 font-bold text-ink"
+        className="mt-5 inline-block rounded-xl bg-kakao px-10 py-3.5 font-bold text-kakao-ink transition hover:brightness-95"
       >
         카카오톡 상담 시작 →
       </a>
