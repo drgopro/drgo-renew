@@ -76,9 +76,9 @@ export default function Home() {
             <Link
               key={label}
               href={href}
-              className="group flex h-28 flex-col items-center justify-center gap-2.5 rounded-xl border border-neutral-200 bg-white font-semibold transition hover:-translate-y-0.5 hover:border-ink hover:shadow-md"
+              className="group pop-sm flex h-28 flex-col items-center justify-center gap-2.5 rounded-xl bg-white font-bold transition hover:-translate-y-1 hover:shadow-[5px_5px_0_0_var(--ink)]"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition group-hover:bg-ink group-hover:text-white">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-ink bg-white text-ink transition group-hover:bg-accent group-hover:border-accent group-hover:text-white">
                 <Icon className="h-5.5 w-5.5" />
               </span>
               <span className="text-sm">{label}</span>
@@ -108,7 +108,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 md:flex-row">
           <a
             href="https://pf.kakao.com/"
-            className="flex flex-[2] flex-col items-center justify-center gap-1.5 rounded-2xl bg-kakao py-10 text-kakao-ink transition hover:brightness-95"
+            className="pop flex flex-[2] flex-col items-center justify-center gap-1.5 rounded-2xl bg-kakao py-10 text-kakao-ink transition hover:-translate-y-0.5"
           >
             <span className="text-xl font-black md:text-2xl">카카오톡 상담 시작 →</span>
             <span className="text-sm opacity-70">세팅 상담은 카카오톡이 가장 빠릅니다</span>
@@ -116,13 +116,13 @@ export default function Home() {
           <div className="flex flex-1 flex-col gap-2.5">
             <Link
               href="/estimate"
-              className="flex flex-1 items-center justify-center rounded-2xl border-2 border-ink py-5 font-bold transition hover:bg-ink hover:text-white"
+              className="pop-sm flex flex-1 items-center justify-center rounded-2xl bg-white py-5 font-black transition hover:bg-ink hover:text-white"
             >
               셀프 견적 내보기
             </Link>
             <Link
               href="/support?tab=event"
-              className="flex items-center justify-center gap-1.5 rounded-xl bg-neutral-100 py-3 text-sm text-neutral-600 transition hover:bg-neutral-200"
+              className="flex items-center justify-center gap-1.5 rounded-xl border-2 border-dashed border-neutral-300 py-3 text-sm font-semibold text-neutral-600 transition hover:border-accent hover:text-accent"
             >
               <span className="font-bold text-accent">★</span> 진행 중 이벤트 보기 →
             </Link>

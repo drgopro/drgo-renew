@@ -34,7 +34,7 @@ export function KakaoCta({ title = "상담은 카카오톡으로", subtitle }: {
       {subtitle && <p className="mt-2 text-sm text-neutral-400">{subtitle}</p>}
       <a
         href="https://pf.kakao.com/"
-        className="mt-5 inline-block rounded-xl bg-kakao px-10 py-3.5 font-bold text-kakao-ink transition hover:brightness-95"
+        className="mt-5 inline-block rounded-xl border-2 border-white/0 bg-kakao px-10 py-3.5 font-black text-kakao-ink shadow-[4px_4px_0_0_rgba(255,255,255,0.25)] transition hover:-translate-y-0.5"
       >
         카카오톡 상담 시작 →
       </a>

@@ -21,8 +21,8 @@ function TabsInner({ base, tabs, defaultKey }: TabsProps) {
           href={`${base}?tab=${t.key}`}
           className={
             t.key === active
-              ? "rounded-full bg-ink px-7 py-2.5 text-sm font-semibold text-white"
-              : "rounded-full border border-neutral-400 px-7 py-2.5 text-sm text-neutral-500 hover:border-ink hover:text-ink"
+              ? "pop-sm rounded-lg bg-ink px-6 py-2.5 text-sm font-bold text-white"
+              : "rounded-lg border-2 border-neutral-300 px-6 py-2.5 text-sm font-semibold text-neutral-500 transition hover:border-ink hover:text-ink"
           }
         >
           {t.label}

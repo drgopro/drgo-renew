@@ -44,8 +44,8 @@ export default function SettingPage() {
         <h2 className="text-center text-lg font-bold">진행 절차</h2>
         <div className="mt-7 grid grid-cols-2 gap-3 md:grid-cols-4">
           {STEPS.map((s, i) => (
-            <div key={s.no} className="relative rounded-xl bg-neutral-50 p-5">
-              <p className="text-xs font-black text-accent">{s.no}</p>
+            <div key={s.no} className="pop-sm relative rounded-xl bg-white p-5 transition hover:-translate-y-0.5">
+              <p className="text-sm font-black text-accent">{s.no}</p>
               <p className="mt-1.5 font-bold">{s.title}</p>
               <p className="mt-1 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
               {i < STEPS.length - 1 && (
@@ -58,7 +58,7 @@ export default function SettingPage() {
 
       {/* 셀프 견적 + FAQ */}
       <section className="mx-auto grid max-w-5xl gap-5 px-4 pb-14 md:grid-cols-5">
-        <div className="flex flex-col items-start justify-center rounded-2xl bg-ink p-7 text-white md:col-span-2">
+        <div className="pop flex flex-col items-start justify-center rounded-2xl bg-ink p-7 text-white md:col-span-2">
           <p className="text-xs font-bold tracking-[0.2em] text-neutral-400">
             <span className="text-accent">★</span> SELF ESTIMATE
           </p>
@@ -69,14 +69,14 @@ export default function SettingPage() {
           </p>
           <Link
             href="/estimate"
-            className="mt-5 rounded-lg bg-white px-6 py-2.5 text-sm font-bold text-ink transition hover:bg-neutral-200"
+            className="mt-5 rounded-lg bg-kakao px-6 py-2.5 text-sm font-black text-kakao-ink transition hover:-translate-y-0.5"
           >
             셀프 견적 내보기 →
           </Link>
         </div>
         <div className="md:col-span-3">
           <p className="mb-2 px-1 text-sm font-bold">자주 묻는 질문</p>
-          <div className="divide-y divide-neutral-100 rounded-2xl border border-neutral-200">
+          <div className="pop divide-y divide-neutral-100 rounded-2xl bg-white">
             {FAQS.map((f) => (
               <details key={f.q} className="group px-5 py-4">
                 <summary className="cursor-pointer list-none text-sm font-semibold">

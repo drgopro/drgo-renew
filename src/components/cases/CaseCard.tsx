@@ -17,7 +17,7 @@ export default function CaseCard({ doc }: { doc: CaseCardData }) {
   const category = CASE_CATEGORY_LABELS[doc.category] ?? doc.category;
   return (
     <Link href={`/cases/${doc.slug}`} className="group block">
-      <div className="relative overflow-hidden rounded-xl bg-neutral-200">
+      <div className="relative overflow-hidden rounded-xl border-2 border-ink bg-neutral-200">
         <MediaImage media={doc.cover} className="aspect-video w-full transition duration-300 group-hover:scale-105" />
         <span className="absolute left-2 top-2 flex items-center gap-1.5 rounded-md bg-black/70 px-2 py-1 text-[11px] font-bold text-white">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
@@ -26,7 +26,7 @@ export default function CaseCard({ doc }: { doc: CaseCardData }) {
       </div>
       <div className="mt-2.5 flex items-start gap-2.5">
         {/* 채널 아바타 — 닥터고블린 스타 */}
-        <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-sm text-accent">
+        <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-ink text-sm text-accent">
           ★
         </span>
         <div className="min-w-0">

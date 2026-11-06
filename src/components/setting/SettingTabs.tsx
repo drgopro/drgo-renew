@@ -71,8 +71,8 @@ function Pills({ active }: { active: string }) {
           scroll={false}
           className={
             t.key === active
-              ? "rounded-full bg-ink px-6 py-2.5 text-sm font-semibold text-white"
-              : "rounded-full border border-neutral-300 px-6 py-2.5 text-sm text-neutral-500 transition hover:border-ink hover:text-ink"
+              ? "pop-sm rounded-lg bg-ink px-6 py-2.5 text-sm font-bold text-white"
+              : "rounded-lg border-2 border-neutral-300 px-6 py-2.5 text-sm font-semibold text-neutral-500 transition hover:border-ink hover:text-ink"
           }
         >
           {t.label}
@@ -97,8 +97,8 @@ function Inner() {
           {tab.rows.map((row) => (
             <div
               key={row.name}
-              className={`flex items-center justify-between rounded-xl border px-5 py-4 transition hover:border-ink ${
-                row.hot ? "border-ink shadow-sm" : "border-neutral-200"
+              className={`flex items-center justify-between rounded-xl px-5 py-4 transition hover:-translate-y-0.5 ${
+                row.hot ? "pop bg-white" : "border-2 border-neutral-200 hover:border-ink"
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -106,7 +106,7 @@ function Inner() {
                   <p className="text-[15px] font-semibold">
                     {row.name}
                     {row.hot && (
-                      <span className="ml-2 rounded-md bg-ink px-1.5 py-0.5 align-middle text-[10px] font-bold text-white">
+                      <span className="ml-2 rounded-md bg-accent px-1.5 py-0.5 align-middle text-[10px] font-black text-white">
                         BASIC
                       </span>
                     )}
@@ -120,7 +120,7 @@ function Inner() {
         </div>
 
         {tab.extra === "travel" && (
-          <div className="mt-4 grid grid-cols-4 overflow-hidden rounded-xl border border-neutral-200 text-center text-sm">
+          <div className="pop-sm mt-5 grid grid-cols-4 overflow-hidden rounded-xl bg-white text-center text-sm">
             {TRAVEL.map((t) => (
               <div key={t.zone} className="border-r border-neutral-100 py-3 last:border-r-0">
                 <p className="text-xs text-neutral-400">{t.zone}</p>

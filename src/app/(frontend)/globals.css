@@ -18,6 +18,16 @@
   --font-sans: var(--font-sans-kr), system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
+/* 네오브루탈 라이트: 두꺼운 보더 + 하드 섀도 (브랜드 블랙) */
+@utility pop {
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 0 var(--ink);
+}
+@utility pop-sm {
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 0 var(--ink);
+}
+
 /* 모바일 가로 스크롤 영역: 스크롤바 숨김 */
 .no-scrollbar {
   scrollbar-width: none;
