@@ -90,8 +90,8 @@ function Inner() {
     <>
       <Pills active={tab.key} />
 
-      <div className="mx-auto mt-8 max-w-3xl px-4">
-        <p className="text-center text-sm text-neutral-500">{tab.desc}</p>
+      <div className="mx-auto mt-8 max-w-5xl px-4">
+        <p className="text-center text-sm text-muted">{tab.desc}</p>
 
         <div className="mt-6 space-y-2.5">
           {tab.rows.map((row) => (
@@ -111,7 +111,7 @@ function Inner() {
                       </span>
                     )}
                   </p>
-                  {row.note && <p className="mt-0.5 text-xs text-neutral-400">{row.note}</p>}
+                  {row.note && <p className="mt-0.5 text-xs text-muted">{row.note}</p>}
                 </div>
               </div>
               <p className="shrink-0 text-[15px] font-bold">{row.price}</p>
@@ -123,14 +123,14 @@ function Inner() {
           <div className="pop-sm mt-5 grid grid-cols-4 overflow-hidden rounded-xl bg-white text-center text-sm">
             {TRAVEL.map((t) => (
               <div key={t.zone} className="border-r border-neutral-100 py-3 last:border-r-0">
-                <p className="text-xs text-neutral-400">{t.zone}</p>
+                <p className="text-xs text-muted">{t.zone}</p>
                 <p className="mt-1 font-bold">{t.fee}</p>
               </div>
             ))}
           </div>
         )}
         {tab.extra === "gear-note" && (
-          <p className="mt-4 rounded-xl bg-neutral-50 px-5 py-3.5 text-center text-xs text-neutral-500">
+          <p className="mt-4 rounded-xl bg-surface px-5 py-3.5 text-center text-xs text-muted">
             시세에 따라 변동됩니다 — 예산을 알려주시면 최적 조합을 제안드립니다.
           </p>
         )}

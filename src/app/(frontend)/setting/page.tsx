@@ -32,8 +32,8 @@ export default function SettingPage() {
         <p className="flex items-center justify-center gap-2 text-xs font-bold tracking-[0.2em] text-neutral-400">
           <span className="text-accent">★</span>SETUP PRICING
         </p>
-        <h1 className="mt-3 text-2xl font-black md:text-3xl">인터넷 방송 세팅, 얼마면 될까요?</h1>
-        <p className="mt-2 text-sm text-neutral-500">방문 · 원격 · 야외 세팅 비용 안내</p>
+        <h1 className="display-type-xl mt-3 text-2xl font-black md:text-3xl">인터넷 방송 세팅, 얼마면 될까요?</h1>
+        <p className="mt-2 text-sm text-muted">방문 · 원격 · 야외 세팅 비용 안내</p>
       </div>
 
       {/* 탭 + 가격표 */}
@@ -41,13 +41,13 @@ export default function SettingPage() {
 
       {/* 진행 절차 4단계 */}
       <section className="mx-auto max-w-5xl px-4 py-14">
-        <h2 className="text-center text-lg font-bold">진행 절차</h2>
+        <h2 className="display-type text-center text-lg font-bold">진행 절차</h2>
         <div className="mt-7 grid grid-cols-2 gap-3 md:grid-cols-4">
           {STEPS.map((s, i) => (
             <div key={s.no} className="pop-sm relative rounded-xl bg-white p-5 transition hover:-translate-y-0.5">
               <p className="text-sm font-black text-accent">{s.no}</p>
               <p className="mt-1.5 font-bold">{s.title}</p>
-              <p className="mt-1 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
+              <p className="mt-1 text-xs leading-relaxed text-muted">{s.desc}</p>
               {i < STEPS.length - 1 && (
                 <span className="absolute -right-2.5 top-1/2 hidden -translate-y-1/2 text-neutral-300 md:block">→</span>
               )}
@@ -59,17 +59,17 @@ export default function SettingPage() {
       {/* 셀프 견적 + FAQ */}
       <section className="mx-auto grid max-w-5xl gap-5 px-4 pb-14 md:grid-cols-5">
         <div className="pop flex flex-col items-start justify-center rounded-2xl bg-ink p-7 text-white md:col-span-2">
-          <p className="text-xs font-bold tracking-[0.2em] text-neutral-400">
+          <p className="text-xs font-bold tracking-[0.2em] text-inv-muted">
             <span className="text-accent">★</span> SELF ESTIMATE
           </p>
-          <p className="mt-3 text-xl font-black leading-snug">
+          <p className="display-type mt-3 text-xl font-black leading-snug">
             장비·환경 몇 가지만 고르면
             <br />
             예상 비용 자동 계산
           </p>
           <Link
             href="/estimate"
-            className="mt-5 rounded-lg bg-kakao px-6 py-2.5 text-sm font-black text-kakao-ink transition hover:-translate-y-0.5"
+            className="mt-5 rounded-lg bg-kakao px-6 py-2.5 text-sm font-black text-kakao-ink transition hover:-translate-y-0.5 active:translate-y-0"
           >
             셀프 견적 내보기 →
           </Link>

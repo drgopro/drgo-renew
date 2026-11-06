@@ -72,19 +72,19 @@ export default function HeroSlider() {
               i === idx ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
-            <p className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-neutral-400">
+            <p className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-inv-muted">
               <span className="text-accent">★</span>
               {s.eyebrow}
             </p>
-            <h1 className="mt-4 text-3xl font-black leading-[1.25] md:text-5xl md:leading-[1.2]">{s.title}</h1>
-            <p className="mt-4 text-sm text-neutral-300 md:text-base">{s.sub}</p>
+            <h1 className="display-type-xl mt-4 text-3xl font-black leading-[1.25] md:text-5xl md:leading-[1.2]">{s.title}</h1>
+            <p className="mt-4 text-sm text-inv-muted md:text-base">{s.sub}</p>
             <div className="mt-7 flex flex-wrap gap-3">
               {s.ctas.map((c) =>
                 c.kind === "kakao" ? (
                   <a
                     key={c.label}
                     href={c.href}
-                    className="rounded-lg bg-kakao px-6 py-3 text-sm font-bold text-kakao-ink transition hover:brightness-95 md:px-7 md:text-base"
+                    className="rounded-lg bg-kakao px-6 py-3 text-sm font-bold text-kakao-ink transition hover:-translate-y-0.5 active:translate-y-0 md:px-7 md:text-base"
                   >
                     {c.label}
                   </a>
@@ -92,7 +92,7 @@ export default function HeroSlider() {
                   <Link
                     key={c.label}
                     href={c.href}
-                    className="rounded-lg border border-white/50 px-6 py-3 text-sm font-bold text-white transition hover:border-white hover:bg-white/10 md:px-7 md:text-base"
+                    className="rounded-lg border border-white/50 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-white hover:bg-white/10 active:translate-y-0 md:px-7 md:text-base"
                   >
                     {c.label}
                   </Link>

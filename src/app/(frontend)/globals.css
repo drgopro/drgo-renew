@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  /* 브랜드 토큰 — 로고(블랙 워드마크 + 레드 스타) 기준 */
+  /* 브랜드 토큰 — taste-skill brand deal 산출 (로고 블랙 + 레드 스타 기준)
+     bg/surface/ink/muted + 다크 섹션용 inv-* 토큰 */
   --ink: #1d1f20;
   --background: #ffffff;
-  --accent: #d6301f; /* 로고 스타 레드 */
+  --surface: #f2f2f2;
+  --muted: #6a6c6c;
+  --accent: #d6301f; /* 로고 스타 레드 = 액션 컬러 */
+  --inv-surface: #2a2c2d;
+  --inv-muted: #a1a2a2;
   --kakao: #fee500;
   --kakao-ink: #191919;
 }
@@ -12,10 +17,25 @@
 @theme inline {
   --color-ink: var(--ink);
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
   --color-accent: var(--accent);
+  --color-inv-surface: var(--inv-surface);
+  --color-inv-muted: var(--inv-muted);
   --color-kakao: var(--kakao);
   --color-kakao-ink: var(--kakao-ink);
   --font-sans: var(--font-sans-kr), system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-display: var(--font-display-latin), var(--font-sans-kr), system-ui, "Apple SD Gothic Neo", sans-serif;
+}
+
+/* 디스플레이 타이포 (Schibsted Grotesk + Noto Sans KR): 타이트한 자간 */
+@utility display-type {
+  font-family: var(--font-display);
+  letter-spacing: -0.035em;
+}
+@utility display-type-xl {
+  font-family: var(--font-display);
+  letter-spacing: -0.042em;
 }
 
 /* 네오브루탈 라이트: 두꺼운 보더 + 하드 섀도 (브랜드 블랙) */

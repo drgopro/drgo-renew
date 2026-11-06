@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
+import { Noto_Sans_KR, Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -8,6 +8,13 @@ const notoSansKr = Noto_Sans_KR({
   variable: "--font-sans-kr",
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
+});
+
+// 디스플레이(헤드라인) 서체 — 한글은 Noto Sans KR로 폴백
+const schibsted = Schibsted_Grotesk({
+  variable: "--font-display-latin",
+  subsets: ["latin"],
+  weight: "variable",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko" className={`${notoSansKr.variable} h-full antialiased`}>
+    <html lang="ko" className={`${notoSansKr.variable} ${schibsted.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-white text-ink">
         <Header />
         <main className="flex-1">{children}</main>

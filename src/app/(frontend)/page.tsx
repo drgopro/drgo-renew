@@ -69,8 +69,8 @@ export default function Home() {
 
       {/* 서비스 바로가기 */}
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="text-xl font-bold md:text-2xl">서비스 바로가기</h2>
-        <p className="mt-1 text-sm text-neutral-500">어떤 서비스가 필요하신가요?</p>
+        <h2 className="display-type text-xl font-bold md:text-2xl">서비스 바로가기</h2>
+        <p className="mt-1 text-sm text-muted">어떤 서비스가 필요하신가요?</p>
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {QUICK.map(({ label, href, Icon }) => (
             <Link
@@ -88,12 +88,12 @@ export default function Home() {
       </section>
 
       {/* 세팅 사례 */}
-      <section className="border-t border-neutral-100 bg-neutral-50/60">
+      <section className="border-t border-neutral-100 bg-surface/60">
         <div className="mx-auto max-w-6xl px-4 py-14">
           <div className="flex items-baseline gap-3">
-            <h2 className="text-xl font-bold md:text-2xl">세팅 사례</h2>
-            <p className="text-sm text-neutral-500">닥터고블린의 특별한 세팅</p>
-            <Link href="/cases" className="ml-auto text-sm text-neutral-500 hover:text-ink">
+            <h2 className="display-type text-xl font-bold md:text-2xl">세팅 사례</h2>
+            <p className="text-sm text-muted">닥터고블린의 특별한 세팅</p>
+            <Link href="/cases" className="ml-auto text-sm text-muted underline-offset-4 hover:text-ink hover:underline">
               전체보기 →
             </Link>
           </div>
@@ -108,9 +108,9 @@ export default function Home() {
         <div className="flex flex-col gap-4 md:flex-row">
           <a
             href="https://pf.kakao.com/"
-            className="pop flex flex-[2] flex-col items-center justify-center gap-1.5 rounded-2xl bg-kakao py-10 text-kakao-ink transition hover:-translate-y-0.5"
+            className="pop flex flex-[2] flex-col items-center justify-center gap-1.5 rounded-2xl bg-kakao py-10 text-kakao-ink transition hover:-translate-y-0.5 active:translate-y-0"
           >
-            <span className="text-xl font-black md:text-2xl">카카오톡 상담 시작 →</span>
+            <span className="display-type text-xl font-black md:text-2xl">카카오톡 상담 시작 →</span>
             <span className="text-sm opacity-70">세팅 상담은 카카오톡이 가장 빠릅니다</span>
           </a>
           <div className="flex flex-1 flex-col gap-2.5">

@@ -31,15 +31,15 @@ export default function CaseCard({ doc }: { doc: CaseCardData }) {
         </span>
         <div className="min-w-0">
           <p className="line-clamp-2 text-[15px] font-semibold leading-snug group-hover:underline">{doc.title}</p>
-          <p className="mt-1 text-xs text-neutral-400">
+          <p className="mt-1 text-xs text-muted">
             닥터고블린컴퍼니
             {doc.publishedAt && ` · ${new Date(doc.publishedAt).toLocaleDateString("ko-KR")}`}
           </p>
           <div className="mt-1.5 flex flex-wrap gap-1">
-            <span className="rounded-md border border-neutral-200 bg-neutral-50 px-1.5 py-0.5 text-[11px] text-neutral-500">
+            <span className="rounded-md border border-neutral-200 bg-neutral-50 px-1.5 py-0.5 text-[11px] text-muted">
               {category}
             </span>
-            <span className="rounded-md border border-neutral-200 bg-neutral-50 px-1.5 py-0.5 text-[11px] text-neutral-500">
+            <span className="rounded-md border border-neutral-200 bg-neutral-50 px-1.5 py-0.5 text-[11px] text-muted">
               세팅 사례
             </span>
           </div>
