@@ -16,7 +16,7 @@ const SLIDES = [
     sub: "1인 미디어 토탈 케어 — 방문·원격·야외 방송 세팅 전문",
     ctas: [
       { label: "카카오톡 상담 시작 →", href: "https://pf.kakao.com/", kind: "kakao" as const },
-      { label: "자가 견적 내보기", href: "/estimate", kind: "outline" as const },
+      { label: "셀프 견적 내보기", href: "/estimate", kind: "outline" as const },
     ],
   },
   {

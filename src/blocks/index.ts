@@ -138,7 +138,7 @@ export const CtaBlock: Block = {
       defaultValue: "kakao",
       options: [
         { label: "카카오톡 상담", value: "kakao" },
-        { label: "자가 견적", value: "estimate" },
+        { label: "셀프 견적", value: "estimate" },
         { label: "직접 링크", value: "link" },
       ],
     },

@@ -22,7 +22,7 @@ const QUICK = [
   { label: "야외 방송", href: "/setting?tab=outdoor", Icon: OutdoorIcon },
   { label: "방송룸 대여", href: "/room", Icon: RoomIcon },
   { label: "장비 렌탈", href: "/rental", Icon: RentalIcon },
-  { label: "자가 견적", href: "/estimate", Icon: EstimateIcon },
+  { label: "셀프 견적", href: "/estimate", Icon: EstimateIcon },
   { label: "디자인·영상", href: "/design", Icon: DesignIcon },
   { label: "고객지원", href: "/support", Icon: SupportIcon },
 ];
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA 계층: 카톡(1순위) > 자가 견적(2순위) > 이벤트(3순위) */}
+      {/* CTA 계층: 카톡(1순위) > 셀프 견적(2순위) > 이벤트(3순위) */}
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="flex flex-col gap-4 md:flex-row">
           <a
@@ -118,7 +118,7 @@ export default function Home() {
               href="/estimate"
               className="flex flex-1 items-center justify-center rounded-2xl border-2 border-ink py-5 font-bold transition hover:bg-ink hover:text-white"
             >
-              자가 견적 내보기
+              셀프 견적 내보기
             </Link>
             <Link
               href="/support?tab=event"

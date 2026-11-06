@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="space-y-1.5">
           <p className="font-bold text-ink">바로가기</p>
           <p className="space-x-3">
-            <Link href="/estimate" className="hover:text-ink">자가 견적</Link>
+            <Link href="/estimate" className="hover:text-ink">셀프 견적</Link>
             <Link href="/support?tab=notice" className="hover:text-ink">공지</Link>
             <Link href="/support?tab=board" className="hover:text-ink">게시판</Link>
             <Link href="/support?tab=event" className="hover:text-ink">이벤트</Link>

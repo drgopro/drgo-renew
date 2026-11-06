@@ -10,7 +10,7 @@ export const NAV: NavItem[] = [
       { label: "방문 세팅", href: "/setting?tab=visit" },
       { label: "원격 세팅", href: "/setting?tab=remote" },
       { label: "야외 방송 세팅", href: "/setting?tab=outdoor" },
-      { label: "자가 견적", href: "/estimate" },
+      { label: "셀프 견적", href: "/estimate" },
     ],
   },
   {

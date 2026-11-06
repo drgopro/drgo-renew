@@ -150,7 +150,7 @@ export function Faq({ items }: FaqBlock) {
 
 export function Cta({ title, kind, url }: CtaBlock) {
   const href = kind === "estimate" ? "/estimate" : kind === "link" ? url || "#" : "https://pf.kakao.com/";
-  const label = kind === "estimate" ? "자가 견적 내보기" : kind === "link" ? "자세히 보기 →" : "카카오톡 상담 →";
+  const label = kind === "estimate" ? "셀프 견적 내보기" : kind === "link" ? "자세히 보기 →" : "카카오톡 상담 →";
   return (
     <div className="my-6 flex flex-col items-center gap-3 rounded-xl bg-neutral-100 p-5 md:flex-row">
       <span className="font-semibold">{title}</span>
