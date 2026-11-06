@@ -18,7 +18,7 @@ function GridInner({ docs }: { docs: CaseCardData[] }) {
     );
   }
   return (
-    <div className="grid grid-cols-2 gap-x-3.5 gap-y-7 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3">
       {list.map((doc) => (
         <CaseCard key={doc.id} doc={doc} />
       ))}

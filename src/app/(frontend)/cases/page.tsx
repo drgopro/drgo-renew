@@ -59,7 +59,7 @@ export default async function CasesPage({ searchParams }: PageProps<"/cases">) {
             등록된 사례가 아직 없습니다 — /admin 에서 첫 사례를 작성해 보세요.
           </p>
         ) : (
-          <div className="grid grid-cols-2 gap-x-3.5 gap-y-7 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3">
             {docs.map((doc) => (
               <CaseCard key={doc.id} doc={toCard(doc)} />
             ))}

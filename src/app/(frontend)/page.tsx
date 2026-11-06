@@ -28,7 +28,7 @@ const QUICK = [
 ];
 
 async function CasesList() {
-  const cases = (await findCases()).slice(0, 4);
+  const cases = (await findCases()).slice(0, 3);
   const toCard = (doc: (typeof cases)[number]): CaseCardData => ({
     id: doc.id,
     title: doc.title,
@@ -42,9 +42,9 @@ async function CasesList() {
     return <p className="py-16 text-center text-neutral-400">등록된 사례가 아직 없습니다.</p>;
   }
   return (
-    <div className="no-scrollbar mt-6 flex snap-x gap-3.5 overflow-x-auto pb-1 md:grid md:grid-cols-4 md:overflow-visible">
+    <div className="no-scrollbar mt-6 flex snap-x gap-4 overflow-x-auto pb-1 md:grid md:grid-cols-3 md:overflow-visible">
       {cases.map((doc) => (
-        <div key={doc.id} className="min-w-[240px] snap-start md:min-w-0">
+        <div key={doc.id} className="min-w-[270px] snap-start md:min-w-0">
           <CaseCard doc={toCard(doc)} />
         </div>
       ))}
@@ -54,9 +54,9 @@ async function CasesList() {
 
 function CasesSkeleton() {
   return (
-    <div className="mt-6 grid grid-cols-2 gap-3.5 md:grid-cols-4">
-      {[1, 2, 3, 4].map((i) => (
-        <div key={i} className="h-44 animate-pulse rounded-xl bg-neutral-200" />
+    <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="aspect-video animate-pulse rounded-xl bg-neutral-200" />
       ))}
     </div>
   );
