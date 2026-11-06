@@ -9,6 +9,9 @@ export async function findCases(category?: string): Promise<Case[]> {
     const list = category ? sampleCases.filter((c) => c.category === category) : sampleCases;
     return list as unknown as Case[];
   }
+  // DB 조회는 빌드 프리렌더가 아닌 요청 시점에 실행 (cacheComponents: Suspense 경계 안에서 스트리밍)
+  const { connection } = await import("next/server");
+  await connection();
   const { getPayloadClient } = await import("./payload");
   const payload = await getPayloadClient();
   const { docs } = await payload.find({
@@ -26,6 +29,8 @@ export async function findCaseBySlug(slug: string): Promise<Case | null> {
     const { sampleCases } = await import("./sample-cases");
     return (sampleCases.find((c) => c.slug === slug) ?? null) as unknown as Case | null;
   }
+  const { connection } = await import("next/server");
+  await connection();
   const { getPayloadClient } = await import("./payload");
   const payload = await getPayloadClient();
   const { docs } = await payload.find({

@@ -56,7 +56,7 @@ EOF
 
 # 3) 정적 내보내기 빌드
 rm -rf out
-NEXT_PUBLIC_STATIC_PREVIEW=1 PREVIEW_BASE_PATH="${PREVIEW_BASE_PATH:-}" npx next build
+NEXT_PUBLIC_STATIC_PREVIEW=1 PREVIEW_BASE_PATH="${PREVIEW_BASE_PATH:-}" NEXT_PUBLIC_BASE_PATH="${PREVIEW_BASE_PATH:-}" npx next build
 
 touch out/.nojekyll
 echo "✔ 정적 프리뷰 빌드 완료: ./out (basePath: '${PREVIEW_BASE_PATH:-}')"

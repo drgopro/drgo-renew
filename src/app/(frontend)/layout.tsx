@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 const notoSansKr = Noto_Sans_KR({
   variable: "--font-sans-kr",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -33,6 +33,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* 모바일 전용 카카오톡 상담 플로팅 버튼 (와이어프레임 모바일 메인 보드) */}
+        <a
+          href="https://pf.kakao.com/"
+          aria-label="카카오톡 상담"
+          className="fixed bottom-5 right-4 z-50 flex h-14 w-14 flex-col items-center justify-center rounded-full bg-kakao text-[11px] font-bold leading-tight text-kakao-ink shadow-lg shadow-black/20 md:hidden"
+        >
+          카톡
+          <span>상담</span>
+        </a>
       </body>
     </html>
   );

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { NAV } from "@/lib/nav";
+import { withBase } from "@/lib/basePath";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -10,8 +11,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-ink bg-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-8 px-4">
-        <Link href="/" className="text-lg font-bold tracking-tight" onClick={() => setOpen(false)}>
-          닥터고블린컴퍼니
+        <Link href="/" onClick={() => setOpen(false)}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={withBase("/logo.png")} alt="닥터고블린" width={148} height={23} className="h-[21px] w-auto md:h-[23px]" />
         </Link>
 
         {/* PC GNB */}
