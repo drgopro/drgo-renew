@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { KakaoCta } from "@/components/ui/Section";
+import { FaqList, KakaoCta, PageTitle, Steps } from "@/components/ui/Section";
 import SettingTabs from "@/components/setting/SettingTabs";
 
 export const metadata: Metadata = {
@@ -27,34 +27,11 @@ const FAQS = [
 export default function SettingPage() {
   return (
     <>
-      {/* 타이틀 — 컴팩트 */}
-      <div className="px-4 pb-8 pt-12 text-center">
-        <p className="flex items-center justify-center gap-2 text-xs font-bold tracking-[0.2em] text-neutral-400">
-          <span className="text-accent">★</span>SETUP PRICING
-        </p>
-        <h1 className="display-type-xl mt-3 text-2xl font-black md:text-3xl">인터넷 방송 세팅, 얼마면 될까요?</h1>
-        <p className="mt-2 text-sm text-muted">방문 · 원격 · 야외 세팅 비용 안내</p>
-      </div>
+      <PageTitle eyebrow="SETUP PRICING" title="인터넷 방송 세팅, 얼마면 될까요?" subtitle="방문 · 원격 · 야외 세팅 비용 안내" />
 
-      {/* 탭 + 가격표 */}
       <SettingTabs />
 
-      {/* 진행 절차 4단계 */}
-      <section className="mx-auto max-w-5xl px-4 py-14">
-        <h2 className="display-type text-center text-lg font-bold">진행 절차</h2>
-        <div className="mt-7 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {STEPS.map((s, i) => (
-            <div key={s.no} className="pop-sm relative rounded-xl bg-white p-5 transition hover:-translate-y-0.5">
-              <p className="text-sm font-black text-accent">{s.no}</p>
-              <p className="mt-1.5 font-bold">{s.title}</p>
-              <p className="mt-1 text-xs leading-relaxed text-muted">{s.desc}</p>
-              {i < STEPS.length - 1 && (
-                <span className="absolute -right-2.5 top-1/2 hidden -translate-y-1/2 text-neutral-300 md:block">→</span>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+      <Steps items={STEPS} />
 
       {/* 셀프 견적 + FAQ */}
       <section className="mx-auto grid max-w-5xl gap-5 px-4 pb-14 md:grid-cols-5">
@@ -76,17 +53,7 @@ export default function SettingPage() {
         </div>
         <div className="md:col-span-3">
           <p className="mb-2 px-1 text-sm font-bold">자주 묻는 질문</p>
-          <div className="pop divide-y divide-neutral-100 rounded-2xl bg-white">
-            {FAQS.map((f) => (
-              <details key={f.q} className="group px-5 py-4">
-                <summary className="cursor-pointer list-none text-sm font-semibold">
-                  Q. {f.q}
-                  <span className="float-right text-neutral-400 transition group-open:rotate-45">＋</span>
-                </summary>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-600">{f.a}</p>
-              </details>
-            ))}
-          </div>
+          <FaqList items={FAQS} />
         </div>
       </section>
 
