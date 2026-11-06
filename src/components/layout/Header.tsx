@@ -13,7 +13,7 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-8 px-4">
         <Link href="/" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBase("/logo.png")} alt="닥터고블린" width={148} height={23} className="h-[21px] w-auto md:h-[23px]" />
+          <img src={withBase("/logo.png")} alt="닥터고블린컴퍼니 — 라이브 스트리밍 전문 토탈 솔루션 제공 기업" width={140} height={42} className="h-9 w-auto md:h-10" />
         </Link>
 
         {/* PC GNB */}
