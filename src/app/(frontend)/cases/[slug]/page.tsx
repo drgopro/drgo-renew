@@ -4,30 +4,22 @@ import Link from "next/link";
 import ContentRichText from "@/components/blocks/ContentRichText";
 import MediaImage from "@/components/blocks/MediaImage";
 import { KakaoCta } from "@/components/ui/Section";
-import { CASE_CATEGORY_LABELS, getPayloadClient } from "@/lib/payload";
+import { CASE_CATEGORY_LABELS } from "@/lib/labels";
+import { findCaseBySlug } from "@/lib/data";
 
+// cacheComponents 모드에선 빈 generateStaticParams가 금지라 여기엔 두지 않는다.
+// 프리뷰(정적) 빌드용 generateStaticParams는 scripts/build-preview.sh 가 빌드 중에만 주입한다.
 export const instant = false;
-
-async function findCase(slug: string) {
-  const payload = await getPayloadClient();
-  const { docs } = await payload.find({
-    collection: "cases",
-    where: { slug: { equals: slug } },
-    limit: 1,
-    depth: 2,
-  });
-  return docs[0] ?? null;
-}
 
 export async function generateMetadata({ params }: PageProps<"/cases/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const doc = await findCase(decodeURIComponent(slug));
+  const doc = await findCaseBySlug(decodeURIComponent(slug));
   return { title: doc ? `${doc.title} — 세팅 사례` : "세팅 사례" };
 }
 
 export default async function CaseDetailPage({ params }: PageProps<"/cases/[slug]">) {
   const { slug } = await params;
-  const doc = await findCase(decodeURIComponent(slug));
+  const doc = await findCaseBySlug(decodeURIComponent(slug));
   if (!doc) notFound();
 
   return (
