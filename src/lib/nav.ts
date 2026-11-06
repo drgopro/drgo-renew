@@ -9,6 +9,7 @@ export const NAV: NavItem[] = [
     children: [
       { label: "방문 세팅", href: "/setting?tab=visit" },
       { label: "원격 세팅", href: "/setting?tab=remote" },
+      { label: "야외 방송 세팅", href: "/setting?tab=outdoor" },
       { label: "자가 견적", href: "/estimate" },
     ],
   },
@@ -16,8 +17,7 @@ export const NAV: NavItem[] = [
     label: "렌탈",
     href: "/rental",
     children: [
-      { label: "장비", href: "/rental?tab=equipment" },
-      { label: "서버", href: "/rental?tab=server" },
+      { label: "장비", href: "/rental" },
       { label: "방송룸 대여", href: "/room" },
     ],
   },
@@ -35,7 +35,7 @@ export const NAV: NavItem[] = [
     href: "/support",
     children: [
       { label: "공지사항", href: "/support?tab=notice" },
-      { label: "QnA", href: "/support?tab=qna" },
+      { label: "게시판", href: "/support?tab=board" },
       { label: "이벤트", href: "/support?tab=event" },
       { label: "강좌", href: "/support?tab=class" },
     ],

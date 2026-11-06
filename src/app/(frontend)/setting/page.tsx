@@ -4,19 +4,20 @@ import Tabs from "@/components/ui/Tabs";
 
 export const metadata: Metadata = {
   title: "방송 세팅 비용 안내",
-  description: "방문·원격 인터넷 방송 세팅 비용 안내",
+  description: "방문·원격·야외 인터넷 방송 세팅 비용 안내",
 };
 
 const TABS = [
   { key: "visit", label: "방문 세팅" },
   { key: "remote", label: "원격 세팅" },
+  { key: "outdoor", label: "야외 방송 세팅" },
   { key: "gear", label: "장비 구매 참고가" },
 ];
 
 export default function SettingPage() {
   return (
     <>
-      <PageTitle title="인터넷 방송 세팅, 얼마면 될까요?" subtitle="방문·원격 세팅 비용 안내" />
+      <PageTitle title="인터넷 방송 세팅, 얼마면 될까요?" subtitle="방문·원격·야외 세팅 비용 안내" />
       <Tabs base="/setting" tabs={TABS} defaultKey="visit" />
 
       <Section title="기본 서비스 · 가격표 (CMS 연동 예정)">

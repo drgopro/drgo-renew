@@ -4,12 +4,12 @@ import Tabs from "@/components/ui/Tabs";
 
 export const metadata: Metadata = {
   title: "고객지원",
-  description: "공지사항 · QnA · 이벤트 · 강좌",
+  description: "공지사항 · 게시판 · 이벤트 · 강좌",
 };
 
 const TABS = [
   { key: "notice", label: "공지사항" },
-  { key: "qna", label: "QnA" },
+  { key: "board", label: "게시판" },
   { key: "event", label: "이벤트" },
   { key: "class", label: "강좌" },
 ];
@@ -17,7 +17,7 @@ const TABS = [
 export default function SupportPage() {
   return (
     <>
-      <PageTitle title="고객지원" subtitle="공지사항 · QnA · 이벤트 · 강좌" />
+      <PageTitle title="고객지원" subtitle="공지사항 · 게시판 · 이벤트 · 강좌" />
       <Tabs base="/support" tabs={TABS} defaultKey="notice" />
 
       <section className="mx-auto max-w-6xl px-4 py-8">
@@ -39,7 +39,7 @@ export default function SupportPage() {
           ))}
         </div>
         <div className="mt-5 flex items-center">
-          <p className="text-xs text-neutral-400">QnA: 로그인 후 글쓰기 · 비밀글 옵션</p>
+          <p className="text-xs text-neutral-400">게시판: 로그인 후 글쓰기 · 비밀글 옵션</p>
           <button
             type="button"
             className="ml-auto rounded-lg bg-ink px-5 py-2.5 text-sm font-semibold text-white"

@@ -17,9 +17,13 @@ export default function Footer() {
           <p className="space-x-3">
             <Link href="/estimate" className="hover:text-ink">자가 견적</Link>
             <Link href="/support?tab=notice" className="hover:text-ink">공지</Link>
-            <Link href="/support?tab=qna" className="hover:text-ink">QnA</Link>
+            <Link href="/support?tab=board" className="hover:text-ink">게시판</Link>
             <Link href="/support?tab=event" className="hover:text-ink">이벤트</Link>
             <Link href="/support?tab=class" className="hover:text-ink">강좌</Link>
+          </p>
+          {/* 관리자(Payload /admin)는 운영 서버에서만 동작 — 디자인 프리뷰(GitHub Pages)에선 404 */}
+          <p>
+            <a href="/admin" className="text-xs text-neutral-400 hover:text-ink">관리자 로그인</a>
           </p>
         </div>
       </div>
