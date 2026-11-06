@@ -47,3 +47,6 @@ next-env.d.ts
 # design preview static export
 /out
 /.preview-payload-backup
+
+# python cache
+__pycache__/
